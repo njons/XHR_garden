@@ -29,7 +29,6 @@ function loadData() {
     cityName +
     "&origin=*";
   xhrRequest("GET", wikiUrl, extractWikiData);
-
   // clear out old data before new request
   streetName = "";
   cityName = "";

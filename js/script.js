@@ -6,9 +6,10 @@ function loadData() {
   const streetInput = document.querySelector("#street");
   const cityInput = document.querySelector("#city");
   const body = document.querySelector("body");
+
   // read street and city names from inputs
-  const streetName = streetInput.value;
-  const cityName = cityInput.value;
+  let streetName = streetInput.value;
+  let cityName = cityInput.value;
 
   // add the Google street View photo
   const address = getStreetView(streetName, cityName);
@@ -66,6 +67,7 @@ const xhrRequest = (method, url, cb) => {
 const extractNYTData = newsData => {
   const articles = newsData.response.docs;
   const nytElem = document.querySelector("#nytimes-articles");
+  clearText(nytElem);
   articles.forEach(article => {
     const newsHeaders = [];
     newsHeaders.push(article.headline.main);
@@ -77,6 +79,7 @@ const extractNYTData = newsData => {
 
 const extractWikiData = wikiData => {
   const wikiElem = document.querySelector("#wikipedia-links");
+  clearText(wikiElem);
   const wikiHeaders = wikiData[1];
   const wikiLinks = wikiData[3];
   createElements(wikiElem, wikiHeaders, wikiLinks);
@@ -94,6 +97,6 @@ const createElements = (parentElement, headersArray, linksArray) => {
   });
 };
 
-const clearInput = elementName => {
+const clearText = elementName => {
   elementName.textContent = "";
 };

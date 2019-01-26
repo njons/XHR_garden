@@ -1,45 +1,117 @@
-* {box-sizing:border-box;}
-body {background-color: #CCC;}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ccc;
+  color: black;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  padding: 20px 20px 0 20px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 25%;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 36px;
+  padding: 20px 0 10px 0;
+}
+
+h3 {
+  font-weight: 700;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+}
+
+label,
+button {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+button {
+  outline: none;
+  border: none;
+  border-radius: 5%;
+  background-color: white;
+  color: black;
+  font-family: "Montserrat", sans-serif;
+}
+
+li {
+  list-style-type: none;
+  font-size: 16px;
+  padding-bottom: 10px;
+}
+
+#coming-soon {
+  font-size: 14px;
+  max-width: 600px;
+  margin: auto;
+}
 
 .bgimg {
-    position:fixed;
-    top: 0;
-    left: 0;
-    width:100%;
-    z-index:-1;
-    opacity:1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+  opacity: 1;
 }
 
 .greeting {
-    color:black;
-    text-shadow: 1px 1px 3px rgba(255,255,255, .5);
-    text-align: center;
+  text-align: center;
 }
 
-.wikipedia-container {
-    float:right;
-    width:290px;
-    padding:10px;
-    margin-right: 10px;
-    background-color: rgba(255,255,255,0.7);
+.container {
+  /* background: yellow; */
+  height: 75%;
+  display: flex;
+  /* flex-wrap: wrap; */
 }
 
 .nytimes-container {
-    padding: 10px;
-    margin-right:300px;
-    background-color: rgba(255,255,255,0.7);
+  border: 5px solid black;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  width: 50%;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.wikipedia-container {
+  border-top: 5px solid black;
+  border-right: 5px solid black;
+  border-bottom: 5px solid black;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 .article-list {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .article {
-    list-style-type: none;
-    padding:10px;
-    border-top: 1px solid #CCC;
+  list-style-type: none;
+  padding: 10px;
+  border-top: 1px solid #ccc;
 }
 .article:first-child {
-    border-top:none;
+  border-top: none;
 }

@@ -39,11 +39,11 @@ form.addEventListener("submit", () => {
 });
 
 const getStreetView = (street, city) => {
-  const comigSoon = document.querySelector("#coming-soon");
+  const comingSoon = document.querySelector("#coming-soon");
   const greeting = document.querySelector("#greeting");
   const address = street + ", " + city;
   greeting.textContent = "So, you want to live at " + address + "?";
-  comigSoon.append(
+  comingSoon.append(
     "Google StreeView images used to be accessible by just inserting the api url for the correct location, so imagine the background of this page as an image for: " +
       address
   );
